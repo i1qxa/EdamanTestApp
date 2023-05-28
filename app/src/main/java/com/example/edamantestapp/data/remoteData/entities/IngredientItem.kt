@@ -6,10 +6,10 @@ import kotlinx.serialization.Serializable
 data class IngredientItem(
     val text: String,
     val quantity: Double,
-//"measure": "<unit>",
+    val measure: String? = null,
     val food: String,
     val weight: Double,
-    val foodCategory: String,
+    val foodCategory: String?,
     val foodId: String,
     val image: String,
 )

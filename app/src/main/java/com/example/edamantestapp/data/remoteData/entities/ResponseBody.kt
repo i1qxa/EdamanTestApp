@@ -8,6 +8,6 @@ data class ResponseBody(
     val to:Int,
     val count:Int,
     val _links:Links,
-    val hits:List<RecipeItem>,
+    val hits:List<Hit>,
     //val hits:List<String>,
 )

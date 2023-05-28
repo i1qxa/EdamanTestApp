@@ -1,6 +1,7 @@
 package com.example.edamantestapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.edamantestapp.data.remoteData.RetrofitService
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                 RetrofitService.appKey)
             if (response.isSuccessful){
                 var a = response
+                Log.d("RESPONSE", a.body()?.hits?.get(1)?.recipe?.label ?: "Empty")
             }
             else{
                 var b = response.errorBody()

@@ -7,11 +7,11 @@ data class RecipeItem(
     val uri:String,
     val label:String,
     val image:String,
-    val listImg:List<ImgItem>,
+    val images:Images,
     val source:String,
     val url:String,
     val shareAs:String,
-    val yield:String,
+    val yield:Double,
     val dietLabels:List<String>,
     val healthLabels:List<String>,
     val cautions:List<String>,
@@ -25,8 +25,8 @@ data class RecipeItem(
     val cuisineType:List<String>,
     val mealType:List<String>,
     val dishType:List<String>,
-    val totalNutrients:List<NutrientItem>,
-    val totalDaily:List<DailyItem>,
+    val totalNutrients:TotalNutrient,
+    val totalDaily:TotalNutrient,
     val digest:List<DigestItem>
 
 )

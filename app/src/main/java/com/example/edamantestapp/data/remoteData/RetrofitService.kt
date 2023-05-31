@@ -30,8 +30,6 @@ interface RetrofitService {
         val appId = "c8b8b822"
         val appKey = "fb21f581222bc2971e070661bea636b9"
 
-        val moshi = Moshi.Builder().build()
-
         private fun createOkHttpClient(): OkHttpClient {
             return OkHttpClient.Builder()
                 .addInterceptor(createLoggingInterceptor())
@@ -51,7 +49,6 @@ interface RetrofitService {
                     .baseUrl(BASE_URL)
                     .client(createOkHttpClient())
                     .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
-                    //.addConverterFactory(MoshiConverterFactory.create(moshi))
                     .build()
                 retrofitService = retrofit.create(RetrofitService::class.java)
             }

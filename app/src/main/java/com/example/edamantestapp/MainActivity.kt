@@ -23,8 +23,7 @@ class MainActivity : AppCompatActivity() {
                 RetrofitService.appId,
                 RetrofitService.appKey)
             if (response.isSuccessful){
-                var a = response
-                Log.d("RESPONSE", a.body()?.hits?.get(1)?.recipe?.label ?: "Empty")
+                Log.d("RESPONSE", response.body()?.hits?.get(1)?.recipe?.label ?: "Empty")
             }
             else{
                 var b = response.errorBody()

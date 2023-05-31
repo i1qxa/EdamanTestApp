@@ -9,5 +9,4 @@ data class ResponseBody(
     val count:Int,
     val _links:Links,
     val hits:List<Hit>,
-    //val hits:List<String>,
 )
